@@ -12,7 +12,6 @@ font-family: 'Roboto Mono', monospace; */
     font-family: 'Roboto Mono', monospace;
   }
   .hero {
-    min-height: 400px;
     padding: 0% 5% 5%;
     display:flex;
     flex-direction:column;
@@ -25,18 +24,18 @@ font-family: 'Roboto Mono', monospace; */
     align-items: center;
   }
 
-  #add-chapters {
+  .add-chapters {
     background-color:#F72C62;
   }
   
-  #add-chapters .hero-content,
-  #change-background-color .hero-content {
+  .add-chapters .hero-content,
+  .change-background-color .hero-content {
     padding: 2% 0%;
     border-bottom: 2px dashed white;
   }  
   
-  #add-chapters .hero-content-last,
-  #change-background-color .hero-content-last {
+  .add-chapters .hero-content-last,
+  .change-background-color .hero-content-last {
     border-bottom: none;
   }
   
@@ -46,17 +45,20 @@ font-family: 'Roboto Mono', monospace; */
   }
   
   
-  #change-background-color {
+  .change-background-color {
     background-color:#7216E2;
   }
-  #keep-exploring {
+  .keep-exploring {
     background-color:#06CC34;
+    min-height: -webkit-calc(100vh - 2em - 8vw);
+    min-height: -moz-calc(100vh - 2em - 8vw);
+    min-height: calc(100vh - 2em - 8vw);
   }
-  #change-font {
+  .change-font {
     background-color:#1F94F4;
   }
   
-  #getting-started {
+  .getting-started {
     background-color:#FFAB12;
   }
   
@@ -206,8 +208,17 @@ font-family: 'Roboto Mono', monospace; */
     margin-left: 20px;
   }
   
+  .json-sample .key {
+    color: black;
+    display: inline-block;
+    padding-right: .5em;
+  }
+  
   .json-sample .value {
     color: #990000;
+    display: inline-block;
+    vertical-align: top;
+    max-width: 80%;
   }
   
   .json-sample .escape {
@@ -230,8 +241,12 @@ video {
   flex-direction:row;
   justify-content: space-around;
   align-items: center;
-  height:50px;
+  padding: 2%;
   background-color:black;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  z-index: 999;
 }
 
 #navigation-bar a{
@@ -257,10 +272,30 @@ video {
   color:#06CC34;
 }
 
+.target {
+   border-top: calc(4vw + 1em) solid transparent;
+   border-top: -webkit-calc(4vw + 1em) solid transparent;
+   border-top: -moz-calc(4vw + 1em) solid transparent;
+   position: relative;
+   margin: calc(-4vw - 1em) 0 0;
+   margin: -webkit-calc(-4vw - 1em) 0 0;
+   margin: -moz-calc(-4vw - 1em) 0 0;
+   -webkit-background-clip: padding-box;
+   -moz-background-clip: padding;
+   background-clip: padding-box;
+}
+
+.content {
+  padding-top: calc(4vw + 1em);
+  padding-top: -webkit-calc(4vw + 1em);
+  padding-top: -moz-calc(4vw + 1em);
+}
+
 footer {
   text-align:center;
   background-color:black;
   padding:2%;
+  
 }
 
 footer .fa.fa-heart.red-heart {
