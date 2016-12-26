@@ -1,0 +1,179 @@
+<html>
+  <head>
+    <title>Welcome to HyperDev!</title>
+    <meta name="description" content="A cool thing made with HyperDev">
+    <link id="favicon" rel="icon" href="https://hyperdev.com/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/instructions.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet">
+  </head>
+  <body>
+
+    <div id="navigation-bar">
+      <a id="get-started-link" href="/instructions#getting-started">Get Started</a>
+      <a id="add-chapters-link" href="/instructions#add-chapters">Add Chapters</a>
+      <a id="choose-bg-color-link" href="/instructions#change-background-color">Choose Background Color</a>
+      <a id="change-font-link" href="/instructions#change-font">Change Font</a>
+      <a id="keep-exploring-link" href="/instructions#keep-exploring">Keep Exploring</a>
+    </div>
+    <div id="getting-started" class="hero">
+      <div class="instructions-header"><h1>Getting Started</h1></div>
+      <div class="hero-content">
+        <div class="demo-wrapper">
+          <img id="remix-and-rename" class="demo"/>
+          <div class="demo-control demo-play"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
+          <div class="demo-control demo-stop"><i class="fa fa-stop-circle" aria-hidden="true"></i></div>
+        </div>
+        <div class="instructions-text">
+          <h3>Instructions:</h3>
+          <p>Get started by remixing the Choose Your Adventure starter page.  Follow the directions below, and take a look at the GIF to the left if you have trouble finding the buttons.</p>
+          <ol>
+            <li>
+              Visit the Choose Your Adventure <a href="https://gomix.com/#!/project/choose-your-own-starter" target="_blank">starter page</a> and click "Remix". This gives you a new copy of the project to make your own!  You may have to wait a few seconds for your new project to load.  
+            </li>
+            <li>
+              Your project starts with kind of a silly name.  
+              Click the <i class="fa fa-chevron-down" aria-hidden="true"></i> next to your project name and then rename your project.
+              You can also wait and do this later, and you can always rename your project!
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    
+    <div id="add-chapters" class="hero">
+      <div class="instructions-header"><h1>Add Chapters to Your Story</h1></div>
+      <div class="hero-content">
+        <div class="instructions-text">
+          <h2 id="chapter-model">Chapter Model</h2>
+          <p>PASSPHRASE:  <span class="handwriting">Bridge</span> </p>
+          
+          <p>CHAPTER TEXT: <span class="handwriting">You take a deep breath before you take your first step onto the rickety bridge.  The wooden board creaks under your wait.  "I don't know about this," whimpers Jonas.  You close your eyes, count to three, and start running as fast as you can.  You hear Jonas cry "Wait up!" and then you hear his footsteps behind you.  Suddenly, you hear a crack.  One of the boards has snapped under your weight, and your foot has gone through it.  You stop, catch your breath, and slow down.  Jonas catches up behind you.  "I thought you were a gonner," he whispers.  You finally make it to the far side of the ravine, and see a sign.  An arrow pointing left is labeled "Dragon's Den".  An arrow pointing right is labeled "Sorceror's Swamp".  Which path would you like to take?  Type <span class="dragons-den">DEN</span> or <span class="swamp">SWAMP</span>.</span>  </p>
+        </div>
+        <div class="instructions-text">
+          <h3>Instructions:</h3>
+          <p>Each chapter needs text and a passphrase.  At the end of each story, you should give your reader two choices, and give each of those choices it's own passphrase. When they submit the passphrase of their choice, they'll be taken to the next chapter! </p>
+          
+          <p>Start by planning your story.  If you are participating in the Mouse Maker Night, you should see some paper slips that you can use to plan your story.  Make sure that each chapter has at least two choices at the end!</p>
+        </div>
+      </div> 
+      <div class="hero-content">
+        <div class="demo-wrapper">
+          <div class="json-sample">
+            <p>{"chapters":</p>
+            <p class="indent1">[</p>
+            <p class="indent2">{</p>
+            <p class="indent2">"passphrase": <span class="value">"bridge"</span>,</p>
+            <p class="indent2"> "text": <span class="value">"You take a deep breath before you take your first step onto the rickety bridge. The wooden board creaks under your wait. <span class="escape">\"</span>I don't know about this,<span class="escape">\"</span> whimpers Jonas. You close your eyes, count to three, and start running as fast as you can. You hear Jonas cry <span class="escape">\"</span>Wait up!<span class="escape">\"</span> and then you hear his footsteps behind you. Suddenly, you hear a crack. One of the boards has snapped under your weight, and your foot has gone through it. You stop, catch your breath, and slow down. Jonas catches up behind you. <span class="escape">\"</span>I thought you were a gonner,<span class="escape">\"</span> he whispers. You finally make it to the far side of the ravine, and see a sign. An arrow pointing left is labeled <span class="escape">\"</span>Dragon's Den<span class="escape">\"</span>. An arrow pointing right is labeled <span class="escape">\"</span>Sorceror's Swamp<span class="escape">\"</span>. Which path would you like to take? Type DEN or SWAMP.</span>"
+            
+            <p class="indent2">}</p>
+            <p class="indent1">]</p>
+            <p>}</p>
+          </div>
+        </div>
+        <div class="instructions-text">
+          <h3>Instructions:</h3>
+          <p>Once you've planned your story, you need to input the text and the passphrases into your app.</p>
+          <p class="emphasis">Make sure that the passphrase for your first chapter is "INTRODUCTION".</p>
+          <p>There are lots of ways to organize information in a way that computer programs can understand. We're using a format called JSON, which stands for JavaScript Object Notation.  </p>
+          <p>You'll be editing the file called <span class="file-name">chapters.json</span> in your editor.</p>
+          <p>Inside the brackets ( [ and ] ), you'll see a list of what are called "objects".  Each object represents a chapter of your story.  It has a passphrase and text.  You'll need to fill in the passphrases and text for your story.</p>  
+          <p>Notice that there are quotation marks around all of my text.  Also, notice that every time I used quotation marks in my story, I put them after a \ .  This is important!  You'll see that the slash and the quotation marks turn blue in the file.  That's good!  Be careful.  If the file is missing even a single comma, it will break your entire app!   </p>
+        </div>
+      </div>       
+      <div class="hero-content hero-content-last">
+        <div class="demo-wrapper video-demo">
+            <video controls="controls">
+              <source src="https://cdn.gomix.com/45a80f2c-9f92-45fb-ab09-b3a87c1f64e5%2Ftesting.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="instructions-text">
+          <h3>Instructions:</h3>
+          <p>As you add your text and passphrases, you should test them.  You can visit your page by clicking the "Show" button (with the sunglasses) toward the top of your editor.</p>
+          
+          <p>Once you can see your page, try entering some of your passphrases.  Do you see the text you expect to? </p>
+          <p>You can look at <a href="https://choose-your-adventure.gomix.me/">this story</a> as a sample.</p>
+        </div>
+      </div>  
+    </div>
+    
+    <div id="change-background-color" class="hero">
+      <div class="instructions-header"><h1>Change the Background Color</h1></div>
+      <div class="hero-content">
+        <div class="demo-wrapper">
+          <a href="http://www.w3schools.com/colors/colors_picker.asp" target="_blank"><img id="change-background-color" src="https://cdn.gomix.com/45a80f2c-9f92-45fb-ab09-b3a87c1f64e5%2FHexColorPicker.png" class="demo-img"></a>
+        </div>
+        <div class="instructions-text">
+          <p>A quick way to change the look of your site will be to change the background color of the page and of the text box that holds the chapter.</p>
+          
+          <p>Colors are represented by a series of six letters and numbers following a hashtag.  For example #24C3E2 represents this shade of <span class="aqua">aqua blue</span>. 
+          #E224C9 represents this shade of <span class="hot-pink">hot pink</span>.  These numbers are called hex colors.</p>
+          
+          <p>You can use <a href="http://www.w3schools.com/colors/colors_picker.asp">this website</a> to help you find the color you want!  Then, follow the directions below to help change the color on your site!</p>
+        </div>
+      </div>
+    
+      <div class="hero-content hero-content-last">
+        <div class="demo-wrapper video-demo">
+          <video controls="controls">
+            <source src="https://cdn.gomix.com/45a80f2c-9f92-45fb-ab09-b3a87c1f64e5%2Fbackground-color.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="instructions-text">
+          <p>Once you've picked the color you want for the background look at the file called <span class="file-name">public/custom-styles.css</span>.  There are two places where you can change the background color.  First, you can change the background color of the whole page by changing the <span class="css-property">background-color</span> value for <span class="css-element">body</span>.  Second, you can change the background color of the text of your chapter by changing the <span class="css-property">background-color</span> property of <span class="css-element">.chapter-text</span>.</p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="change-font" class="hero">
+      <div class="instructions-header"><h1>Change the Font</h1></div>
+      <div class="hero-content">
+        <div class="demo-wrapper video-demo">
+          <video controls="controls">
+            <source src="https://cdn.gomix.com/45a80f2c-9f92-45fb-ab09-b3a87c1f64e5%2Fchange-font.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="instructions-text">
+          <p>Next, you may want to change the fonts used on your page.  A great place to choose from a wide variety of fonts is the <a href="https://fonts.google.com/">Google Fonts</a> page.</p>
+          <p>Select fonts you think you might like to use by clicking the <i class="fa fa-plus" aria-hidden="true"></i> next to each font.  Once you have selected a few fonts, click the black box at the bottom of your page.  This will give you a line of code to copy that will look something like this:</p>
+          <div class="code-snippet">&lt;link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto+Mono" rel="stylesheet"&gt;</div>
+          <p>Copy that link and add it to line 15 of the file called <span class="file-name">views/index.html</span> in your editor.</p>
+          <p>Now, your website has your new font available to it, but you haven't told your website where you want that font to go.  To do this, you'll go back to <span class="file-name">public/custom-styles.css</span>.  Replace the value of <span class="css-property">font-family</span> for <span class="css-element">#title</span> and <span class="css-element">#chapter-text</span> with the names of your new fonts.  (Make sure not to delete the quotation marks!)</p>
+        </div>
+      </div>      
+    </div>
+    <div id="keep-exploring" class="hero">
+      <div class="instructions-header"><h1>Keep Exploring!</h1></div>
+      <div class="hero-content">
+        <div class="demo-wrapper">
+          <img id="hummingbird" class="demo" src="https://cdn-images-1.medium.com/max/800/1*EBmH6BKWbWhnvSpGGF7RAA@2x.png"/>
+
+        </div>
+        <div class="instructions-text">
+          <p>There's much more you can do!  Try updating the CSS in style.css to change more about the look of your page.  Try adding a <a href="http://www.w3schools.com/html/html_images.asp">picture</a>! Can you change the page title?  The color or shape of the "Go" button? Any time you feel proud of what you've done, remix your own project so that you can keep a copy.  The real choose-your-own-adventure is about how you build your first app!</p>
+        </div>
+      </div>      
+    </div>
+    
+    <footer>
+      <a id="gomix-link" href="http://gomix.com" target="_blank">
+        Built With <i class="fa fa-heart" aria-hidden="true"></i> Using Gomix
+      </a>
+    </footer>
+    
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="/instructions.js"></script>
+    <script src="https://use.fontawesome.com/fcb170d64e.js"></script>
+
+
+  </body>
+</html>

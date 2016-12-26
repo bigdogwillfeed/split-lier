@@ -1,0 +1,86 @@
+/* styles */
+/* called by your view template */
+
+/* You might want to try something fancier: */
+/* less: http://lesscss.org/ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 25px 0px;
+  margin: 0px;
+}
+
+/* font-family: 'Special Elite', cursive;
+font-family: 'Chelsea Market', cursive;
+font-family: 'IM Fell DW Pica', serif; */
+
+#title {
+  font-size: 2.5em;
+  text-align: center;
+}
+
+#chapter-text {
+  font-family: 'Chelsea Market', serif;
+  border:3px solid black;
+  padding:20px;
+  margin-right: 20%;
+  margin-left:20%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #f9f2ec;
+  min-height: 300px;
+}
+
+#form-wrapper {
+  display:flex;
+  align-items: center;
+  flex-direction:column;
+  align-content: center;
+  margin: 0px;
+}
+
+#form {
+  align-self: center;
+}
+
+input {
+  height: 40px;
+  border:2px black solid;
+}
+
+#choice {
+  width: 200px;
+  padding: 10px;
+}
+
+#go {
+  width: 50px;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+#alert {
+  background-color: #efa19b;
+  border: 2px solid black;
+  text-align: center;
+  margin: 2% 30%;
+  padding: 5px;
+}
+
+footer {
+  text-align:center;
+  background-color:black;
+  padding:2%;
+  color:white;
+}
+
+footer .fa.fa-heart.red-heart {
+  color:#F72C62;
+}
+
+footer .fa {
+  color:white;
+}

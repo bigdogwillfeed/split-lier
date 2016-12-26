@@ -1,0 +1,272 @@
+/*   font-family: 'Josefin Sans', sans-serif;
+font-family: 'Roboto Mono', monospace; */
+  
+  * {
+    box-sizing: border-box;
+    color:white;
+  }
+  
+  body {
+    padding:0px;
+    margin:0px;
+    font-family: 'Roboto Mono', monospace;
+  }
+  .hero {
+    min-height: 400px;
+    padding: 0% 5% 5%;
+    display:flex;
+    flex-direction:column;
+  }
+  
+  .hero-content {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #add-chapters {
+    background-color:#F72C62;
+  }
+  
+  #add-chapters .hero-content,
+  #change-background-color .hero-content {
+    padding: 2% 0%;
+    border-bottom: 2px dashed white;
+  }  
+  
+  #add-chapters .hero-content-last,
+  #change-background-color .hero-content-last {
+    border-bottom: none;
+  }
+  
+  .instructions-text h3 {
+    color:black;
+    font-weight:bold;
+  }
+  
+  
+  #change-background-color {
+    background-color:#7216E2;
+  }
+  #keep-exploring {
+    background-color:#06CC34;
+  }
+  #change-font {
+    background-color:#1F94F4;
+  }
+  
+  #getting-started {
+    background-color:#FFAB12;
+  }
+  
+  .demo-wrapper, .instructions-text {
+    width: 45%;
+    float:left;
+    position:relative;
+  }
+  
+  .demo, .demo-img {
+    width: 100%;
+    position:relative;
+  }
+  
+  .instructions-header h1 {
+    font-size:2em;
+    padding: 0px 0px 5px;
+  }
+  
+  .demo-wrapper {
+    display:flex;
+    align-items:center;
+  }
+  
+  .demo-control{
+    opacity: 0.6;
+    font-size: 7em;
+    position: absolute;
+    z-index: 500;
+    width:100%;
+    text-align:center;
+    display:none;
+    align-self:center;
+  }
+  
+@media (max-width: 900px) {
+  .demo-control {
+    font-size: 5em;
+  }
+}
+
+@media (max-width: 600px) {
+  .demo-control {
+    font-size: 3em;
+  }
+}
+  
+  .fa {
+    color: gray;
+  }
+  
+  .fa:hover {
+    color: #F72C62;
+  }
+  
+  .instructions-text {
+    background-color: white;
+    color: black;
+    border: 3px solid black;
+    padding: 1%;
+  }
+  
+  .instructions-text p, 
+  .instructions-text li,
+  .instructions-text a {
+    color: black;
+  }
+  
+  .instructions-text a,
+  .instructions-text a:visited {
+    text-decoration:underline;
+    color: #F72C62;
+  }  
+  .instructions-text a:hover {
+    text-decoration:underline;
+    color: #7216E2;
+  }
+  
+  .instructions-text li {
+    margin: 2% 0%;
+  }
+  
+  .aqua {
+    color: #24c3e2;
+  }
+  
+  .hot-pink {
+    color: #e224c9;d
+  }
+  
+  .file-name {
+    color:gray;
+  }
+  
+  .dragons-den {
+    color:green;
+  }
+  
+  .swamp {
+    color:brown;
+  }
+  
+  .handwriting {
+    font-family: 'Coming Soon', cursive;
+    color: black;
+  }
+  
+  #chapter-model {
+    color: black;
+  }
+  
+  .css-property {
+    color:#8080ff;
+    font-weight: bold;
+  }
+  
+  .css-element {
+    color:#b30059;
+  }
+  
+  .code-snippet {
+    color: black;
+    background: rgba(0,0,0,0.08);
+    font-family: 'Roboto Mono';
+    font-size: .8em;
+    padding: 10px 5px;
+  }
+  
+  .json-sample {
+    background-color: white;
+    padding: 5%;
+    border: 3px solid black;
+  }
+  
+  .json-sample p {
+    color: black;
+    margin: 0px;
+    padding: 0px;
+    font-size: .8em;
+  }
+  
+  .json-sample .indent1 {
+    margin-left: 10px;
+  }
+  
+  .json-sample .indent2 {
+    margin-left: 20px;
+  }
+  
+  .json-sample .value {
+    color: #990000;
+  }
+  
+  .json-sample .escape {
+    color: #76a6f2;
+  }
+  
+  .emphasis {
+    font-weight: bold;
+    color:black;
+    background-color:#b3d7ff;
+    padding: 15px;
+  }
+  
+video {
+  width:100%;
+}
+
+#navigation-bar {
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+  align-items: center;
+  height:50px;
+  background-color:black;
+}
+
+#navigation-bar a{
+  font-weight: bold;
+}
+#get-started-link:hover  {
+  color: #FFAB12;
+}
+    
+#add-chapters-link:hover {
+  color: #F72C62;
+}
+    
+#choose-bg-color-link:hover {
+  color: #7216E2;
+}
+    
+#change-font-link:hover {
+  color: #1F94F4;
+}
+    
+#keep-exploring-link:hover {
+  color:#06CC34;
+}
+
+footer {
+  text-align:center;
+  background-color:black;
+  padding:2%;
+}
+
+footer .fa.fa-heart.red-heart {
+  color:#F72C62;
+}
+
+footer .fa {
+  color:white;
+}
