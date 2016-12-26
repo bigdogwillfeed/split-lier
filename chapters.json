@@ -1,0 +1,40 @@
+{"chapters":
+  [
+    {
+    "passphrase": "introduction",
+    "text": "The bell rings.  That's it.  The 8th grade is over, and once you leave, you'releaving for good.  You would be excited, except that your best friend, Jonas is going to a different high school and you won't een be able to hang out with him this summer because you've got to work at your mom's cooking supplies store.  You shuffle out the front door.  You see Jonas across the schoolyard and wave.  Maybe you can get one last slice of pizza together.  Suddenly, the ground shakes and a schism opens across the schoolyard.  You see Jonas tumble in.  Should you run for help or jump in after him.  Choose RUN or JUMP."
+    },       
+    {
+    "passphrase": "run",
+    "text": "You run as quickly as you can back into the school.  You know that Ms. Womperswift will be able to help.  This isn't the first time things have gotten wierd at I.S. 51, and she always seems to know more than she lets on.  \"Ms. Womperswift!\" She turns toward you, calmly.  \"There's a ravine in the schoolyard, and Jonas fell in!\"  She looks at ou for a moment longer and says, \"sounds like an adventure to me.\"  You can't believe it!  Then she says, \"Let me offer you something to help.\"  \"Would you prefer this poncho or this knapsack?\"  Choose PONCHO or KNAPSACK."
+    },     {
+    "passphrase": "jump",
+    "text": "You plunge into the ravine.  Enveloped by darkness, you feel the air get cooler as you thrash your arms through the ampty space.  You come to a sudden stop mide air and then ease gently to the cool, wet ground.  How did that happen?!  You still can't see a thing, so you bein to crawl around.  \"Jonas?\" you cry, first in a whisper and then more and more loudly.  A light comes from around a corner.  It's Ms. Womperswift.  She always seems to be around when things like this happen.  \"Choose,\" she says, and holds out a poncho and a knapsack.  Choose PONCHO or KNAPSACK."
+    },         
+    {
+    "passphrase": "bridge",
+    "text": "You take a deep breath before you take your first step onto the rickety bridge. The wooden board creaks under your wait. \"I don't know about this,\" whimpers Jonas. You close your eyes, count to three, and start running as fast as you can. You hear Jonas cry \"Wait up!\" and then you hear his footsteps behind you. Suddenly, you hear a crack. One of the boards has snapped under your weight, and your foot has gone through it. You stop, catch your breath, and slow down. Jonas catches up behind you. \"I thought you were a gonner,\" he whispers. You finally make it to the far side of the ravine, and see a sign. An arrow pointing left is labeled \"Dragon's Den\". An arrow pointing right is labeled \"Sorceror's Swamp\". Which path would you like to take? Type DEN or SWAMP."
+    },    
+    {
+    "passphrase": "knapsack",
+    "text": "Deep at the bottom of the ravine, you feel cold and wet.  It is still to dark to see.  You reach inside the knapsack and feel something glassy.  Inside that, you find a waxy cylinder.  It's a candle!  You fumble through the bag, find a new set of matches, and light the candle.  By the glow of the flame, you see Jonas cowering in the corner.  You run to him, get him to his feet, and guide him as you explore.  You see a portal to a world that looks much like your own, but darker.  The schoolyard is there with the ravine looking twice as wide and stretching as far as they eye can see.  Across it, there is a dilapidated bridge.  Should you cross it, or turn around?  Choose BRIDGE to cross the bridge or TURN to turn around."    
+    },    
+    {
+    "passphrase": "poncho",
+    "text": "Deep at the bottom of the ravine, you begin to feel drops of water on your skin.  Your eyes ahave adjusted to the darkness, and you start to creep forward.  The wetness on your skin begins to feel sticky, then it begins to burn.  Thinking quickly, you pull the poncho on to protect yourself.  You hear someone call your name.  It's Jonas!!  \"Come here,\" he says.  \"Look at this!\"  You see a portal to a world that looks much like your own, but darker.  The schoolyard is there with the ravine looking twice as wide and stretching as far as they eye can see.  Across it, there is a dilapidated bridge.  Should you cross it, or turn around?  Choose BRIDGE to cross the bridge or TURN to turn around."
+    },    
+    {
+    "passphrase": "turn",
+    "text": "NOT YET COMPLETE"
+    },    
+    {
+    "passphrase": "den",
+    "text": "NOT YET COMPLETE"
+    },
+    {
+    "passphrase": "swamp",
+    "text": "NOT YET COMPLETE"
+    }
+  ]
+}
+

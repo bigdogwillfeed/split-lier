@@ -1,0 +1,13 @@
+body {
+  background-color: #92f4ee;
+}
+
+#title {
+  font-family: 'IM Fell DW Pica', serif;
+  color: white;
+}
+
+#chapter-text {
+  font-family: 'Chelsea Market', serif
+  background-color: #f9f2ec;
+}
