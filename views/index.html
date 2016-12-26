@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Choose Your Adventure</title>
-    <meta name="description" content="A cool thing made with HyperDev">
-    <link id="favicon" rel="icon" href="https://hyperdev.com/favicon-app.ico" type="image/x-icon">
+    <title>Choose Your own Adventure</title>
+    <meta name="description" content="Build your own Choose-Your-Adventure web app in Gomix">
+    <link id="favicon" rel="icon" href="https://gomix.com/favicon-app.ico" type="image/x-icon">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,44 +12,41 @@
     <link href="https://fonts.googleapis.com/css?family=Chelsea+Market|IM+Fell+DW+Pica|Special+Elite" rel="stylesheet">
     
     <!--Add your copied font <link> code below -->
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Molle:400i" rel="stylesheet">
+    
+    
     
   
   </head>
+  
   <body>
-    <div id="title">
-      Choose Your Own Adventure
-    </div>
-    
-    <div id="chapter-text">
+    <div class="content">
+      <div id="title">Choose Your Own Adventure</div>
       
-    </div>
-    
-    <div id="alert"><span id="wrong-word-choice"></span> is not a valid choice.  Please check your spelling!</div>
-    <div id="form-wrapper">
-      <div id="form">
-        <form id="choice-submission">
-          <input id="choice" type="text" label="choice" name="choice" placeholder="Enter choice here.">
-          <input id = "go" type="submit" value="Go">
-        </form>          
+      <div>
+        <div id="chapter-text"></div>
+        
+        <div id="alert" style="display:none"><span id="wrong-word-choice"></span> is not a valid choice.</div>
+        <div id="form-wrapper">
+          <div id="prompt"></div>
+          <div id="choice-submission"></div>    
+        </div>
+        <div id="reset" style="display:none"><a href="/"><button>Start Over</button></a></div>
       </div>
-    
-    </div>
-    
-<!--     <footer>
-  Want to build your own Choose-Your-Own-Adventure app?  Check us out <a href="https://choose-your-adventure.gomix.me">here</a>.
-  <a id="gomix-link" href="http://gomix.com" target="_blank">
-    Built With <i class="fa fa-heart" aria-hidden="true"></i> Using Gomix
-  </a>
-</footer> -->
-    
+      
+      <footer>
+        <p><a href="/instructions">Want to build your own Choose-Your-Own-Adventure app?</a></p>
+        <a id="gomix-link" href="http://gomix.com" target="_blank">
+          Built With <i class="fa fa-heart" aria-hidden="true"></i> Using Gomix
+        </a>
+      </footer>
 
+    </div>
 
     <!-- Your web-app is https, so your scripts need to be too -->
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"
             integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
             crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
     <script src="/client.js"></script>
+    <script src="https://use.fontawesome.com/fcb170d64e.js"></script>
   </body>
 </html>

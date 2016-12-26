@@ -5,7 +5,6 @@
 // add other scripts at the bottom of index.html
 
 $(function() {
-  console.log('hello world :o');
   
   getChapter("introduction");
   
@@ -16,23 +15,48 @@ $(function() {
     $('#choice').val("");
   });
   
-  
-});
-
-function getChapter(passphrase){
-  $.get('/chapters', function(data) {
-    var chapter = _.find(data.chapters, function(chapter) { return chapter.passphrase.toLowerCase() == passphrase.toLowerCase()});
-    
-    if (!!chapter) {
-      $('#chapter-text').html(chapter.text);
+  function getChapter(passphrase){
+    $.get('/chapter/' + encodeURIComponent(passphrase))
+    .done(function(chapter) {
       $('#alert').hide();
-     
-    }
-    else {
+      showChapter(chapter);
+    })
+    .fail(function() {
       $('#wrong-word-choice').text(passphrase.toUpperCase());
       $('#alert').show();
+    });
+  }
+  
+  function showChapter(chapter) {
+    $('#chapter-text').html(chapter.text);
+    $('#prompt').html(chapter.prompt);
+    var $choices = $('#choice-submission');
+    $choices.empty();
+    
+    if (chapter.choices.length > 0) {
+      chapter.choices.forEach(function(choice) {
+        var $btn = $('<button />');
+        $btn.html(choice);
+        $btn.click(function() { getChapter(choice); });
+        $choices.append($btn);
+      });
+    } else {
+      var $reset = $('#reset');
+      $choices.append($reset);
+      $reset.show();
     }
-  });
-}
+  }
+  
+  $('#gomix-link').hover(heartRed, heartWhite);
+
+  function heartRed () {
+    $('.fa-heart').addClass('red-heart');
+  }
+  
+  function heartWhite () {
+    $('.fa-heart').removeClass('red-heart');
+  }
+  
+});
 
 

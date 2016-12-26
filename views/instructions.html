@@ -1,7 +1,8 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Welcome to HyperDev!</title>
-    <meta name="description" content="A cool thing made with HyperDev">
+    <title>Build Your Own Adventure</title>
+    <meta name="description" content="Build your own Choose-Your-Adventure web app in Gomix">
     <link id="favicon" rel="icon" href="https://hyperdev.com/favicon-app.ico" type="image/x-icon">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,7 +20,10 @@
       <a id="change-font-link" href="/instructions#change-font">Change Font</a>
       <a id="keep-exploring-link" href="/instructions#keep-exploring">Keep Exploring</a>
     </div>
-    <div id="getting-started" class="hero">
+    
+    <div class="content">
+    
+    <div class="hero getting-started"><div class="target" id="getting-started"></div>
       <div class="instructions-header"><h1>Getting Started</h1></div>
       <div class="hero-content">
         <div class="demo-wrapper">
@@ -44,18 +48,20 @@
       </div>
     </div>
     
-    <div id="add-chapters" class="hero">
+    
+    <div class="hero add-chapters"><div class="target" id="add-chapters"></div>
       <div class="instructions-header"><h1>Add Chapters to Your Story</h1></div>
       <div class="hero-content">
         <div class="instructions-text">
           <h2 id="chapter-model">Chapter Model</h2>
           <p>PASSPHRASE:  <span class="handwriting">Bridge</span> </p>
-          
-          <p>CHAPTER TEXT: <span class="handwriting">You take a deep breath before you take your first step onto the rickety bridge.  The wooden board creaks under your wait.  "I don't know about this," whimpers Jonas.  You close your eyes, count to three, and start running as fast as you can.  You hear Jonas cry "Wait up!" and then you hear his footsteps behind you.  Suddenly, you hear a crack.  One of the boards has snapped under your weight, and your foot has gone through it.  You stop, catch your breath, and slow down.  Jonas catches up behind you.  "I thought you were a gonner," he whispers.  You finally make it to the far side of the ravine, and see a sign.  An arrow pointing left is labeled "Dragon's Den".  An arrow pointing right is labeled "Sorceror's Swamp".  Which path would you like to take?  Type <span class="dragons-den">DEN</span> or <span class="swamp">SWAMP</span>.</span>  </p>
+          <p>CHAPTER TEXT: <span class="handwriting">You take a deep breath before you take your first step onto the rickety bridge.  The wooden board creaks under your wait.  "I don't know about this," whimpers Jonas.  You close your eyes, count to three, and start running as fast as you can.  You hear Jonas cry "Wait up!" and then you hear his footsteps behind you.  Suddenly, you hear a crack.  One of the boards has snapped under your weight, and your foot has gone through it.  You stop, catch your breath, and slow down.  Jonas catches up behind you.  "I thought you were a gonner," he whispers.  You finally make it to the far side of the ravine, and see a sign.  An arrow pointing left is labeled "Dragon's Den".  An arrow pointing right is labeled "Sorceror's Swamp"</span>  </p>
+          <p>PROMPT: <span class="handwriting">Which path would you like to take?</span></p>
+          <p>CHOICES: <span class="handwriting"><span class="dragons-den">Dragon's Den</span> or <span class="swamp">Sorcerer's Swamp</span></span></p>
         </div>
         <div class="instructions-text">
           <h3>Instructions:</h3>
-          <p>Each chapter needs text and a passphrase.  At the end of each story, you should give your reader two choices, and give each of those choices it's own passphrase. When they submit the passphrase of their choice, they'll be taken to the next chapter! </p>
+          <p>Each chapter needs text and a passphrase.  At the end of each chapter, the reader needs a prompt and some choices. Each of those choices should be another chapter's passphrase. When they submit the passphrase of their choice, they'll be taken to the appropriate chapter! </p>
           
           <p>Start by planning your story.  If you are participating in the Mouse Maker Night, you should see some paper slips that you can use to plan your story.  Make sure that each chapter has at least two choices at the end!</p>
         </div>
@@ -63,25 +69,25 @@
       <div class="hero-content">
         <div class="demo-wrapper">
           <div class="json-sample">
-            <p>{"chapters":</p>
-            <p class="indent1">[</p>
-            <p class="indent2">{</p>
-            <p class="indent2">"passphrase": <span class="value">"bridge"</span>,</p>
-            <p class="indent2"> "text": <span class="value">"You take a deep breath before you take your first step onto the rickety bridge. The wooden board creaks under your wait. <span class="escape">\"</span>I don't know about this,<span class="escape">\"</span> whimpers Jonas. You close your eyes, count to three, and start running as fast as you can. You hear Jonas cry <span class="escape">\"</span>Wait up!<span class="escape">\"</span> and then you hear his footsteps behind you. Suddenly, you hear a crack. One of the boards has snapped under your weight, and your foot has gone through it. You stop, catch your breath, and slow down. Jonas catches up behind you. <span class="escape">\"</span>I thought you were a gonner,<span class="escape">\"</span> he whispers. You finally make it to the far side of the ravine, and see a sign. An arrow pointing left is labeled <span class="escape">\"</span>Dragon's Den<span class="escape">\"</span>. An arrow pointing right is labeled <span class="escape">\"</span>Sorceror's Swamp<span class="escape">\"</span>. Which path would you like to take? Type DEN or SWAMP.</span>"
-            
-            <p class="indent2">}</p>
-            <p class="indent1">]</p>
-            <p>}</p>
+            <p>var chapters = [</p>
+            <p class="indent1">{</p>
+            <p class="indent2"><span class="key">passphrase:</span><span class="value">"bridge"</span>,</p>
+            <p class="indent2"><span class="key">text:</span><span class="value">"You take a deep breath before you take your first step onto the rickety bridge. The wooden board creaks under your weight. <span class="escape">\"</span>I don't know about this,<span class="escape">\"</span> whimpers Jonas. You close your eyes, count to three, and start running as fast as you can. You hear Jonas cry <span class="escape">\"</span>Wait up!<span class="escape">\"</span> and then you hear his footsteps behind you. Suddenly, you hear a crack. One of the boards has snapped under your weight, and your foot has gone through it. You stop, catch your breath, and slow down. Jonas catches up behind you. <span class="escape">\"</span>I thought you were a gonner,<span class="escape">\"</span> he whispers. You finally make it to the far side of the ravine, and see a sign. An arrow pointing left is labeled <span class="escape">\"</span>Dragon's Den<span class="escape">\"</span>. An arrow pointing right is labeled <span class="escape">\"</span>Sorceror's Swamp<span class="escape">\"</span>.",</span></p>
+            <p class="indent2"><span class="key">prompt:</span><span class="value">Which path would you like to take?"</span>,</p>
+            <p class="indent2"><span class="key">choices:</span>[ <span class="value">"Dragon's Den"</span>, <span class="value">"Sorcerer's Swamp"</span> ]</p>
+            <p class="indent1">}</p>
+            <p>]</p>
           </div>
         </div>
         <div class="instructions-text">
           <h3>Instructions:</h3>
-          <p>Once you've planned your story, you need to input the text and the passphrases into your app.</p>
+          <p>Once you've planned your story, you need to input the chapter details into your app.</p>
           <p class="emphasis">Make sure that the passphrase for your first chapter is "INTRODUCTION".</p>
           <p>There are lots of ways to organize information in a way that computer programs can understand. We're using a format called JSON, which stands for JavaScript Object Notation.  </p>
-          <p>You'll be editing the file called <span class="file-name">chapters.json</span> in your editor.</p>
-          <p>Inside the brackets ( [ and ] ), you'll see a list of what are called "objects".  Each object represents a chapter of your story.  It has a passphrase and text.  You'll need to fill in the passphrases and text for your story.</p>  
-          <p>Notice that there are quotation marks around all of my text.  Also, notice that every time I used quotation marks in my story, I put them after a \ .  This is important!  You'll see that the slash and the quotation marks turn blue in the file.  That's good!  Be careful.  If the file is missing even a single comma, it will break your entire app!   </p>
+          <p>You'll be editing the file called <span class="file-name">chapters.js</span> in your editor.</p>
+          <p>Inside the brackets ( [ and ] ), you'll see a list of what are called "objects".  Each object represents a chapter of your story.  It has a passphrase, text, a prompt, and an array of choices.  You'll need to fill in the details for each chapter of your story.</p>  
+          <p>Notice that there are quotation marks around all of my text.  Also, notice that every time I used quotation marks in my story, I put them after a \ .  This is important!  You'll see that the slash and the quotation marks turn blue in the file.  That's good!  Be careful.  If the file is missing even a single comma, it will break your entire app!   Gomix will identify the location of any syntax issues in the gutter next to the line numbers.</p>
+          <p>To help you make sure that all your chapters and choices are correctly linked, we run some quick validation on your chapters. If there are any issues, you'll be notified</p>
         </div>
       </div>       
       <div class="hero-content hero-content-last">
@@ -92,15 +98,16 @@
         </div>
         <div class="instructions-text">
           <h3>Instructions:</h3>
-          <p>As you add your text and passphrases, you should test them.  You can visit your page by clicking the "Show" button (with the sunglasses) toward the top of your editor.</p>
+          <p>As you add your chapters, you should test them.  You can visit your page by clicking the "Show" button (with the sunglasses) toward the top of your editor.</p>
           
-          <p>Once you can see your page, try entering some of your passphrases.  Do you see the text you expect to? </p>
+          <p>Once you can see your page, try making some choices.  Do you see the text you expect to? </p>
           <p>You can look at <a href="https://choose-your-adventure.gomix.me/">this story</a> as a sample.</p>
         </div>
       </div>  
     </div>
     
-    <div id="change-background-color" class="hero">
+    
+    <div class="hero change-background-color"><div class="target" id="change-background-color"></div>
       <div class="instructions-header"><h1>Change the Background Color</h1></div>
       <div class="hero-content">
         <div class="demo-wrapper">
@@ -129,7 +136,7 @@
     </div>
     
     
-    <div id="change-font" class="hero">
+    <div class="hero change-font"><div class="target" id="change-font"></div>
       <div class="instructions-header"><h1>Change the Font</h1></div>
       <div class="hero-content">
         <div class="demo-wrapper video-demo">
@@ -146,17 +153,21 @@
         </div>
       </div>      
     </div>
-    <div id="keep-exploring" class="hero">
+    
+    
+    <div class="hero keep-exploring"><div class="target" id="keep-exploring"></div>
       <div class="instructions-header"><h1>Keep Exploring!</h1></div>
       <div class="hero-content">
         <div class="demo-wrapper">
-          <img id="hummingbird" class="demo" src="https://cdn-images-1.medium.com/max/800/1*EBmH6BKWbWhnvSpGGF7RAA@2x.png"/>
+          <img id="hummingbird" class="demo-img" src="https://cdn-images-1.medium.com/max/800/1*EBmH6BKWbWhnvSpGGF7RAA@2x.png"/>
 
         </div>
         <div class="instructions-text">
           <p>There's much more you can do!  Try updating the CSS in style.css to change more about the look of your page.  Try adding a <a href="http://www.w3schools.com/html/html_images.asp">picture</a>! Can you change the page title?  The color or shape of the "Go" button? Any time you feel proud of what you've done, remix your own project so that you can keep a copy.  The real choose-your-own-adventure is about how you build your first app!</p>
         </div>
       </div>      
+    </div>
+    
     </div>
     
     <footer>

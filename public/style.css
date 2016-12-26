@@ -8,9 +8,21 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   padding: 25px 0px;
   margin: 0px;
+  font-family: 'Chelsea Market', serif;
+  height: 100%;
+}
+
+.content {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 200px;
 }
 
 /* font-family: 'Special Elite', cursive;
@@ -23,7 +35,6 @@ font-family: 'IM Fell DW Pica', serif; */
 }
 
 #chapter-text {
-  font-family: 'Chelsea Market', serif;
   border:3px solid black;
   padding:20px;
   margin-right: 20%;
@@ -34,32 +45,23 @@ font-family: 'IM Fell DW Pica', serif; */
   min-height: 300px;
 }
 
-#form-wrapper {
-  display:flex;
-  align-items: center;
-  flex-direction:column;
-  align-content: center;
-  margin: 0px;
+#prompt {
+  text-align: center;
 }
 
-#form {
-  align-self: center;
+#choice-submission {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    width: 100%;
 }
 
-input {
-  height: 40px;
-  border:2px black solid;
-}
-
-#choice {
-  width: 200px;
-  padding: 10px;
-}
-
-#go {
-  width: 50px;
+button {
+  min-width: 50px;
   font-weight: bold;
   font-size: 1em;
+  padding: 1em;
+  margin: 1em;
 }
 
 #alert {
@@ -75,6 +77,9 @@ footer {
   background-color:black;
   padding:2%;
   color:white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 footer .fa.fa-heart.red-heart {
@@ -82,5 +87,10 @@ footer .fa.fa-heart.red-heart {
 }
 
 footer .fa {
-  color:white;
+  color: white;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
 }
